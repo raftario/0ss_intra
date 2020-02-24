@@ -86,5 +86,14 @@ namespace Gestionnaire_Clients
             Customers.Add(customer);
             CustomerList.SelectedItem = customer;
         }
+        private void DeleteCustomer(object sender, RoutedEventArgs e)
+        {
+            var index = CustomerList.SelectedIndex;
+            Customers.RemoveAt(index);
+            if (Customers.Count > 0)
+            {
+                CustomerList.SelectedItem = Customers[index > 0 ? index - 1 : index];
+            }
+        }
     }
 }
