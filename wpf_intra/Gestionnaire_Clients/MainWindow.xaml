@@ -15,7 +15,15 @@
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Fichier"></MenuItem>
+            <MenuItem Header="Fichier">
+                <MenuItem Header="Ouvrir..."></MenuItem>
+                <MenuItem Header="Sauvegarder"></MenuItem>
+                <MenuItem Header="Fermer"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Nouveau client"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Quitter"></MenuItem>
+            </MenuItem>
             <MenuItem Header="Édition"></MenuItem>
             <MenuItem Header="Affichage"></MenuItem>
         </Menu>
