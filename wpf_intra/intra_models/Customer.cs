@@ -7,9 +7,9 @@ namespace intra_models
     public class Customer : INotifyPropertyChanged
     {
         private string _name;
-        public string Name { get => _name; set { _name = value; OnPropertyChanged(); } }
+        public string Name { get => _name; set { _name = value; OnPropertyChanged(); OnPropertyChanged("DisplayName"); } }
         private string _lastName;
-        public string LastName { get => _lastName; set { _lastName = value; OnPropertyChanged(); } }
+        public string LastName { get => _lastName; set { _lastName = value; OnPropertyChanged(); OnPropertyChanged("DisplayName"); } }
         private string _address;
         public string Address { get => _address; set { _address = value; OnPropertyChanged(); } }
         private string _city;
@@ -24,6 +24,8 @@ namespace intra_models
         public string PicturePath { get => _picturePath; set { _picturePath = value; OnPropertyChanged(); } }
         private string _info;
         public string Info { get => _info; set { _info = value; OnPropertyChanged(); } }
+
+        public string DisplayName => $"{LastName}, {Name}";
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged([CallerMemberName] string propertyName = "")
