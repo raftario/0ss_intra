@@ -69,5 +69,22 @@ namespace Gestionnaire_Clients
         {
             CurrentCustomer = (Customer)CustomerList.SelectedItem;
         }
+
+        private void AddCustomer(object sender, RoutedEventArgs e)
+        {
+            var customer = new Customer
+            {
+                Name = "Raphaël",
+                LastName = "Thériault",
+                Address = "1910, CH St-Paul",
+                City = "St-Mathieu-du-Parc",
+                Province = "QC",
+                PostalCode = "G0X 1N0",
+                PicturePath = "images/user.png",
+                ContactInfo = "Cell: 819-531-5343"
+            };
+            Customers.Add(customer);
+            CustomerList.SelectedItem = customer;
+        }
     }
 }

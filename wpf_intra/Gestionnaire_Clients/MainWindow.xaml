@@ -20,7 +20,7 @@
                 <MenuItem Header="Sauvegarder"></MenuItem>
                 <MenuItem Header="Fermer"></MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Nouveau client"></MenuItem>
+                <MenuItem Header="Nouveau client" Click="AddCustomer"></MenuItem>
                 <Separator></Separator>
                 <MenuItem Header="Quitter"></MenuItem>
             </MenuItem>
@@ -33,7 +33,7 @@
         </StatusBar>
         <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
             <Label>Liste des clients</Label>
-            <Button VerticalAlignment="Center">Nouveau client</Button>
+            <Button Click="AddCustomer" VerticalAlignment="Center">Nouveau client</Button>
         </StackPanel>
         <ListView x:Name="CustomerList" Width="250" DockPanel.Dock="Left" ItemTemplate="{StaticResource CustomerListItemTemplate}" ItemsSource="{Binding Customers}" SelectionChanged="ListView_SelectionChanged"></ListView>
         <StackPanel>
